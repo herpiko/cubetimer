@@ -84,5 +84,6 @@ class CubetimerApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
+    
     app = CubetimerApplication()
     return app.run(sys.argv)

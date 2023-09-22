@@ -16,6 +16,9 @@
             <property name="label">Scramble</property>
             <property name="vexpand">True</property>
             <property name="vexpand-set">True</property>
+            <style>
+              <class name="scramble-label"/>
+            </style>
             <layout>
               <property name="column">1</property>
               <property name="column-span">1</property>
@@ -29,9 +32,12 @@
             <property name="focusable">True</property>
             <property name="hexpand">True</property>
             <property name="hexpand-set">True</property>
-            <property name="label">00:00.000</property>
+            <property name="label">00:00.00</property>
             <property name="vexpand">True</property>
             <property name="vexpand-set">True</property>
+            <style>
+              <class name="timer-label"/>
+            </style>
             <layout>
               <property name="column">1</property>
               <property name="column-span">1</property>
@@ -56,16 +62,8 @@
   <menu id="primary_menu">
     <section>
       <item>
-        <attribute name="action">app.preferences</attribute>
-        <attribute name="label" translatable="yes">_Preferences</attribute>
-      </item>
-      <item>
-        <attribute name="action">win.show-help-overlay</attribute>
-        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
-      </item>
-      <item>
         <attribute name="action">app.about</attribute>
-        <attribute name="label" translatable="yes">_About cubetimer</attribute>
+        <attribute name="label" translatable="yes">_About CubeTimer</attribute>
       </item>
     </section>
   </menu>
