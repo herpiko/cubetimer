@@ -1,0 +1,7 @@
+data/xyz.aguno.CubeTimer.desktop.in
+data/xyz.aguno.CubeTimer.appdata.xml.in
+data/xyz.aguno.CubeTimer.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+
