@@ -13,7 +13,7 @@
           <object class="GtkLabel" id="ScrambleNotation">
             <property name="hexpand">True</property>
             <property name="hexpand-set">True</property>
-            <property name="label">Scramble: -</property>
+            <property name="label">Scramble</property>
             <property name="vexpand">True</property>
             <property name="vexpand-set">True</property>
             <layout>
@@ -26,9 +26,10 @@
         </child>
         <child>
           <object class="GtkLabel" id="Timer">
+            <property name="focusable">True</property>
             <property name="hexpand">True</property>
             <property name="hexpand-set">True</property>
-            <property name="label">00:00.00</property>
+            <property name="label">00:00.000</property>
             <property name="vexpand">True</property>
             <property name="vexpand-set">True</property>
             <layout>
@@ -44,7 +45,7 @@
     <child type="titlebar">
       <object class="GtkHeaderBar" id="header_bar">
         <child type="end">
-          <object class="GtkMenuButton">
+          <object class="GtkMenuButton" id="Menu">
             <property name="icon-name">open-menu-symbolic</property>
             <property name="menu-model">primary_menu</property>
           </object>
