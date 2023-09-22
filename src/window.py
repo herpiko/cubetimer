@@ -27,16 +27,38 @@
 # authorization.
 
 from gi.repository import Gtk
+import random
 
 
 @Gtk.Template(resource_path='/xyz/aguno/CubeTimer/window.ui')
 class CubetimerWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'CubetimerWindow'
 
-    label = Gtk.Template.Child()
-
+    ScrambleNotation = Gtk.Template.Child("ScrambleNotation")
+    Timer = Gtk.Template.Child("Timer")
+    
+    
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        scrambled = self.generate_scramble()
+        print(scrambled) 
+        self.ScrambleNotation.set_text(scrambled)
+        print("helloooo")
+       
+        # Events 
+        #self.Timer.connect("key-press-event", self.start_timer)
+        
+    def generate_scramble(self):
+        moves = ["U", "U'", "U2", "D", "D'", "D2", "L", "L'", "L2", "R", "R'", "R2", "F", "F'", "F2", "B", "B'", "B2"]
+        scramble = []
+        for _ in range(21):
+            random_move = random.choice(moves)
+            scramble.append(random_move)
+        return "  ".join(scramble)
+        
+    def start_timer(self):
+        print("ok")
+        
 
 
 class AboutDialog(Gtk.AboutDialog):

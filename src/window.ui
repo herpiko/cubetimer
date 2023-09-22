@@ -1,9 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.14.0 -->
 <interface>
+  <!-- interface-name window.ui -->
   <requires lib="gtk" version="4.0"/>
+  <requires lib="gio" version="2.0"/>
   <template class="CubetimerWindow" parent="GtkApplicationWindow">
-    <property name="default-width">600</property>
     <property name="default-height">300</property>
+    <property name="default-width">600</property>
+    <child>
+      <object class="GtkGrid">
+        <child>
+          <object class="GtkLabel" id="ScrambleNotation">
+            <property name="hexpand">True</property>
+            <property name="hexpand-set">True</property>
+            <property name="label">Scramble: -</property>
+            <property name="vexpand">True</property>
+            <property name="vexpand-set">True</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="column-span">1</property>
+              <property name="row">0</property>
+              <property name="row-span">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Timer">
+            <property name="hexpand">True</property>
+            <property name="hexpand-set">True</property>
+            <property name="label">00:00.00</property>
+            <property name="vexpand">True</property>
+            <property name="vexpand-set">True</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="column-span">1</property>
+              <property name="row">1</property>
+              <property name="row-span">1</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
     <child type="titlebar">
       <object class="GtkHeaderBar" id="header_bar">
         <child type="end">
@@ -14,30 +51,20 @@
         </child>
       </object>
     </child>
-    <child>
-      <object class="GtkLabel" id="label">
-        <property name="label">Hello, World!</property>
-        <attributes>
-          <attribute name="weight" value="bold"/>
-          <attribute name="scale" value="2"/>
-        </attributes>
-      </object>
-    </child>
   </template>
-
   <menu id="primary_menu">
     <section>
       <item>
-        <attribute name="label" translatable="yes">_Preferences</attribute>
         <attribute name="action">app.preferences</attribute>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
         <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_About cubetimer</attribute>
         <attribute name="action">app.about</attribute>
+        <attribute name="label" translatable="yes">_About cubetimer</attribute>
       </item>
     </section>
   </menu>
