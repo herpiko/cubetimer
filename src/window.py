@@ -43,7 +43,7 @@ class CubetimerWindow(Gtk.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         
-        self.set_title("Rubik Cube Timer")
+        self.set_title("Cube Timer")
         
         # Events 
         event_controller = Gtk.EventControllerKey()
@@ -83,7 +83,7 @@ class CubetimerWindow(Gtk.ApplicationWindow):
         if color == "grey":
             css_provider.load_from_data(b"""
             .timer-label {
-                font-size: 40px; /* Adjust the size as needed */
+                font-size: 60px; /* Adjust the size as needed */
                 color: grey;
                 font-weight: bold;
             }
@@ -91,14 +91,14 @@ class CubetimerWindow(Gtk.ApplicationWindow):
         if color == "green":
             css_provider.load_from_data(b"""
             .timer-label {
-                font-size: 40px; /* Adjust the size as needed */
+                font-size: 60px; /* Adjust the size as needed */
                 color: green;
             }
             """)
         if color == "orange":
             css_provider.load_from_data(b"""
             .timer-label {
-                font-size: 40px; /* Adjust the size as needed */
+                font-size: 60px; /* Adjust the size as needed */
                 color: orange;
             }
             """)
@@ -106,7 +106,7 @@ class CubetimerWindow(Gtk.ApplicationWindow):
         if color == "red":
             css_provider.load_from_data(b"""
             .timer-label {
-                font-size: 40px; /* Adjust the size as needed */
+                font-size: 60px; /* Adjust the size as needed */
                 color: red;
             }
             """)
