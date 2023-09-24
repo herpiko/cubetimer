@@ -1,4 +1,4 @@
-# Simple Rubik Cube Timer
+# A Simple Rubik's Cube Timer
 
 Like a StackMat timer, but for Linux.
 
