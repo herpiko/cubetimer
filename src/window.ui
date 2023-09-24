@@ -6,18 +6,20 @@
   <requires lib="gtk" version="4.0"/>
   <template class="CubetimerWindow" parent="GtkApplicationWindow">
     <property name="default-height">300</property>
-    <property name="default-width">600</property>
+    <property name="default-width">550</property>
     <child>
       <object class="GtkGrid">
         <child>
-          <object class="GtkLabel" id="Prev3ScrambleNotation">
+          <object class="GtkLabel" id="ScrambleNotation">
             <property name="hexpand">True</property>
             <property name="hexpand-set">True</property>
-            <property name="margin-top">15</property>
+            <property name="label">Scramble Notation</property>
+            <property name="margin-top">30</property>
+            <property name="margin-bottom">15</property>
             <property name="vexpand">False</property>
             <property name="vexpand-set">True</property>
             <style>
-              <class name="prev-3-scramble-label"/>
+              <class name="scramble-label"/>
             </style>
             <layout>
               <property name="column">1</property>
@@ -28,14 +30,15 @@
           </object>
         </child>
         <child>
-          <object class="GtkLabel" id="Prev2ScrambleNotation">
+          <object class="GtkLabel" id="Timer">
+            <property name="focusable">True</property>
             <property name="hexpand">True</property>
             <property name="hexpand-set">True</property>
-            <property name="margin-top">15</property>
-            <property name="vexpand">False</property>
+            <property name="label">00:00.00</property>
+            <property name="vexpand">True</property>
             <property name="vexpand-set">True</property>
             <style>
-              <class name="prev-2-scramble-label"/>
+              <class name="timer-label"/>
             </style>
             <layout>
               <property name="column">1</property>
@@ -64,15 +67,14 @@
           </object>
         </child>
         <child>
-          <object class="GtkLabel" id="Timer">
-            <property name="focusable">True</property>
+          <object class="GtkLabel" id="Prev2ScrambleNotation">
             <property name="hexpand">True</property>
             <property name="hexpand-set">True</property>
-            <property name="label">00:00.00</property>
-            <property name="vexpand">True</property>
+            <property name="margin-top">15</property>
+            <property name="vexpand">False</property>
             <property name="vexpand-set">True</property>
             <style>
-              <class name="timer-label"/>
+              <class name="prev-2-scramble-label"/>
             </style>
             <layout>
               <property name="column">1</property>
@@ -83,15 +85,16 @@
           </object>
         </child>
         <child>
-          <object class="GtkLabel" id="ScrambleNotation">
+          <object class="GtkLabel" id="Prev3ScrambleNotation">
+            <property name="label">Usage: press and hold space bar, then release to start the timer.</property>
             <property name="hexpand">True</property>
             <property name="hexpand-set">True</property>
-            <property name="label">Scramble Notation</property>
-            <property name="margin-bottom">15</property>
+            <property name="margin-top">15</property>
+            <property name="margin-bottom">30</property>
             <property name="vexpand">False</property>
             <property name="vexpand-set">True</property>
             <style>
-              <class name="scramble-label"/>
+              <class name="prev-3-scramble-label"/>
             </style>
             <layout>
               <property name="column">1</property>
