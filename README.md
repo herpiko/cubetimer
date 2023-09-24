@@ -16,3 +16,12 @@ Currently this software is still under review by Flathub team but if you don't w
 flatpak install --user https://dl.flathub.org/build-repo/51051/xyz.aguno.CubeTimer.flatpakref
 ```
 
+## Usage
+
+Press and hold spacebar key, then release to start the timer. Press spacebar again to stop the timer. Repeat.
+
+
+## License
+
+MIT
+
