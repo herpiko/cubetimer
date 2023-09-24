@@ -1,7 +1,7 @@
 {
     "app-id" : "xyz.aguno.CubeTimer",
-    "runtime" : "org.gnome.Sdk",
-    "runtime-version" : "45",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "42",
     "sdk" : "org.gnome.Sdk",
     "command" : "cubetimer",
     "finish-args" : [
