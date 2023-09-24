@@ -1,18 +1,12 @@
-name: cubetimer # you probably want to 'snapcraft register <name>'
-base: core22 # the base snap is the execution environment for this snap
-version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
+name: cubetimer
+base: core22
+version: '0.1.7'
 summary: Simple rubik cube timer, like stackmat but for Linux.
 description: |
-  This is my-snap's description. You have a paragraph or two to tell the
-  most important story about your snap. Keep it under 100 words though,
-  we live in tweetspace and your description wants to look good in the snap
-  store.
+  Like a StackMat, but for Linux.
 
-grade: stable # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
-
-environment:
-  PYTHONPATH: ${SNAP}/lib/python3.10/site-packages:${SNAP}/usr/lib/python3/dist-packages
+grade: stable
+confinement: strict
 
 apps:
   cubetimer:
@@ -20,8 +14,15 @@ apps:
     command: usr/bin/cubetimer
     desktop: usr/share/applications/xyz.aguno.CubeTimer.desktop
     common-id: xyz.aguno.CubeTimer.desktop
+    slots: [ dbus-svc ]
     environment:
-      PYTHONPATH: ${SNAP}/lib/ython3.10/site-packages:${SNAP}/usr/lib/python3/dist-packages
+      PYTHONPATH: ${SNAP}/lib/python3.10/site-packages:${SNAP}/usr/lib/python3/dist-packages
+
+slots:
+  dbus-sv:
+    interface: dbus
+    bus: session
+    name: xyz.aguno.CubeTimer
 
 layout:
   /usr/share/cubetimer:
@@ -30,8 +31,8 @@ layout:
 parts:
   cubetimer:
     source: https://github.com/herpiko/cubetimer
-    source-tag: 'master'
     source-type: git
+    source-commit: 'f98cb4c9edd11d651eb47868b4e241602972279a'
     plugin: meson
     meson-parameters:
       - --prefix=/usr
@@ -47,11 +48,3 @@ parts:
       craftctl default
       # WORKAROUND: Use python from search path, the path detected by meson doesn't exist when running the Snap
       sed -e '1c#!/usr/bin/env python3' -i "${CRAFT_PART_INSTALL}/usr/bin/cubetimer"
-      #BASEDIR=$(echo "${SNAP}" | cut -d '/' -f 4)
-      #sed -i 's/\/usr\/share/\/snap\/snapcraft\/'"${BASEDIR}"'\/usr\/share/g' "${CRAFT_PART_INSTALL}/usr/bin/cubetimer"
-      #echo "#!/bin/sh" > "${CRAFT_PART_INSTALL}/usr/bin/cubetimer"
-      #echo "cd ${SNAP}" >> "${CRAFT_PART_INSTALL}/usr/bin/cubetimer"
-      #echo "ls" >> "${CRAFT_PART_INSTALL}/usr/bin/cubetimer"
-      #echo "pwd" >> "${CRAFT_PART_INSTALL}/usr/bin/cubetimer"
-      #echo "ls usr/share/" >> "${CRAFT_PART_INSTALL}/usr/bin/cubetimer"
-      #echo "cat usr/share/cubetimer.gresource" >> "${CRAFT_PART_INSTALL}/usr/bin/cubetimer"
