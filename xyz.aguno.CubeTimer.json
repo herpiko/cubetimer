@@ -1,7 +1,7 @@
 {
     "app-id" : "xyz.aguno.CubeTimer",
     "runtime" : "org.gnome.Sdk",
-    "runtime-version" : "42",
+    "runtime-version" : "45",
     "sdk" : "org.gnome.Sdk",
     "command" : "cubetimer",
     "finish-args" : [
@@ -30,12 +30,10 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/herpiko/src/CubeTimer"
+                    "url" : "https://github.com/herpiko/cubetimer.git",
+                    "commit" : "cf93b40096e8f318f3487b60bb2a714911f34015"
                 }
             ]
         }
-    ],
-    "build-options" : {
-        "env" : {        }
-    }
+    ]
 }
