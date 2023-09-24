@@ -1,0 +1,3 @@
+snapcraft:
+	snapcraft --verbosity=trace
+	
