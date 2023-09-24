@@ -65,7 +65,7 @@ class CubetimerWindow(Gtk.ApplicationWindow):
         ##self.load_css()
 
         self.generate_scramble()
-        self.set_timer_color("grey")
+        #self.set_timer_color("grey")
 
     def load_css(self):
         css_provider = Gtk.CssProvider()
