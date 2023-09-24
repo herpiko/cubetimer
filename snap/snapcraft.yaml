@@ -19,7 +19,7 @@ apps:
       PYTHONPATH: ${SNAP}/lib/python3.10/site-packages:${SNAP}/usr/lib/python3/dist-packages
 
 slots:
-  dbus-sv:
+  dbus-svc:
     interface: dbus
     bus: session
     name: xyz.aguno.CubeTimer
