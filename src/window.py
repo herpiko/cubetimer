@@ -31,16 +31,6 @@ import random
 import time
 import threading
 
-css_provider = Gtk.CssProvider()
-css_provider.load_from_file(
-    Gio.File.new_for_path('/xyz/aguno/CubeTimer/style.css')
-)
-Gtk.StyleContext.add_provider_for_display(
-    Gdk.Display.get_default(),
-    css_provider,
-    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-)
-
 @Gtk.Template(resource_path='/xyz/aguno/CubeTimer/window.ui')
 class CubetimerWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'CubetimerWindow'
