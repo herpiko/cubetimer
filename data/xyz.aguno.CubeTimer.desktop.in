@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=cubetimer
+Name=Cube Timer
 Exec=cubetimer
 Icon=xyz.aguno.CubeTimer
 Terminal=false
