@@ -62,7 +62,7 @@ class CubetimerWindow(Gtk.ApplicationWindow):
         self.Timer.set_can_focus(True)
         self.Timer.grab_focus()
 
-        self.load_css()
+        ##self.load_css()
 
         self.generate_scramble()
         self.set_timer_color("grey")
