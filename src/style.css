@@ -1,0 +1,20 @@
+.timer {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.timer-grey {
+  color: grey;
+}
+
+.timer-green {
+  color: green;
+}
+
+.timer-orange {
+  color: orange;
+}
+
+.timer-red {
+  color: red;
+}

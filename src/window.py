@@ -26,11 +26,20 @@
 # use or other dealings in this Software without prior written
 # authorization.
 
-from gi.repository import Gtk, Gdk, GLib, Pango
+from gi.repository import Gtk, Gdk, GLib, Pango, Gio
 import random
 import time
 import threading
 
+css_provider = Gtk.CssProvider()
+css_provider.load_from_file(
+    Gio.File.new_for_path('/xyz/aguno/CubeTimer/style.css')
+)
+Gtk.StyleContext.add_provider_for_display(
+    Gdk.Display.get_default(),
+    css_provider,
+    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+)
 
 @Gtk.Template(resource_path='/xyz/aguno/CubeTimer/window.ui')
 class CubetimerWindow(Gtk.ApplicationWindow):
@@ -51,7 +60,6 @@ class CubetimerWindow(Gtk.ApplicationWindow):
         event_controller.connect("key-released", self.on_key_released)
         self.add_controller(event_controller)
 
-
         self.timer_running = False
         self.start_time = None
         self.elapsed_time = 0
@@ -62,27 +70,12 @@ class CubetimerWindow(Gtk.ApplicationWindow):
         self.Timer.set_can_focus(True)
         self.Timer.grab_focus()
 
-        ##self.load_css()
+        self.Timer.set_css_classes(['timer', 'timer-grey'])
 
         self.generate_scramble()
-        #self.set_timer_color("grey")
-
-    def load_css(self):
-        css_provider = Gtk.CssProvider()
-        #css_provider.load_from_data(b"""
-        #    .scramble-label {
-        #        font-size: 18px; /* Adjust the size as needed */
-        #        color: grey;
-        #    }
-        #""")
-        style_context = self.ScrambleNotation.get_style_context()
-        style_context.add_provider(css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
     def set_timer_color(self, color):
-        css_provider = Gtk.CssProvider()
-
-        style_context = self.Timer.get_style_context()
-        style_context.add_provider(css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+        self.Timer.set_css_classes(['timer', 'timer-' + color])
 
     def generate_scramble(self):
         moves = ["U", "U'", "U2", "D", "D'", "D2", "L", "L'", "L2", "R", "R'", "R2", "F", "F'", "F2", "B", "B'", "B2"]
@@ -110,7 +103,7 @@ class CubetimerWindow(Gtk.ApplicationWindow):
     def on_key_released(self, controller, keyval, keycode, state):
         if keyval == Gdk.KEY_space:
             if not self.timer_running and self.elapsed_time == 0 and self.state == "ready":
-                #self.set_timer_color("orange")
+                self.set_timer_color("orange")
                 self.state = "running"
                 self.timer_running = True
                 self.start_time = time.time()
@@ -125,13 +118,13 @@ class CubetimerWindow(Gtk.ApplicationWindow):
                 self.reset()
             if self.timer_running:
                 self.state = "stopped"
-                #self.set_timer_color("red")
+                self.set_timer_color("red")
                 self.timer_running = False
                 self.generate_scramble()
 
     def ready(self):
         self.state = "ready"
-        #self.set_timer_color("green")
+        self.set_timer_color("green")
 
     def reset(self):
         if self.state == "stopped":
@@ -140,7 +133,7 @@ class CubetimerWindow(Gtk.ApplicationWindow):
             seconds = int(self.elapsed_time % 60)
             milliseconds = int((self.elapsed_time % 1) * 100)
             self.Timer.set_label(f"{minutes:02}:{seconds:02}.{milliseconds:02}")
-            #self.set_timer_color("grey")
+            self.set_timer_color("grey")
             GLib.timeout_add(100, self.ready)
 
 
