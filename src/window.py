@@ -69,47 +69,47 @@ class CubetimerWindow(Gtk.ApplicationWindow):
 
     def load_css(self):
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_data("""
+        css_provider.load_from_data(b"""
             .scramble-label {
                 font-size: 18px; /* Adjust the size as needed */
                 color: grey;
             }
-        """, "utf-8")
+        """)
         style_context = self.ScrambleNotation.get_style_context()
         style_context.add_provider(css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
     def set_timer_color(self, color):
         css_provider = Gtk.CssProvider()
         if color == "grey":
-            css_provider.load_from_data("""
+            css_provider.load_from_data(b"""
             .timer-label {
                 font-size: 60px; /* Adjust the size as needed */
                 color: grey;
                 font-weight: bold;
             }
-            """, "utf-8")
+            """)
         if color == "green":
-            css_provider.load_from_data("""
+            css_provider.load_from_data(b"""
             .timer-label {
                 font-size: 60px; /* Adjust the size as needed */
                 color: green;
             }
-            """, "utf-8")
+            """)
         if color == "orange":
-            css_provider.load_from_data("""
+            css_provider.load_from_data(b"""
             .timer-label {
                 font-size: 60px; /* Adjust the size as needed */
                 color: orange;
             }
-            """, "utf-8")
+            """)
 
         if color == "red":
-            css_provider.load_from_data("""
+            css_provider.load_from_data(b"""
             .timer-label {
                 font-size: 60px; /* Adjust the size as needed */
                 color: red;
             }
-            """, "utf-8")
+            """)
 
         style_context = self.Timer.get_style_context()
         style_context.add_provider(css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
