@@ -3,7 +3,18 @@
 	<id>xyz.aguno.CubeTimer</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>MIT</project_license>
-	<description>
+	<release>0.1.8</release>
+	<name>CubeTimer</name>
+	<summary>
 	  <p>Like a StackMat, but for Linux.</p>
+	</summary>
+	<description>
+	  <p>CubeTimer is a simple app timer for measure your solve 
+	  time while playing with Rubik cube puzzle, especially 3x3x3.
+	  It does have generated scramble notation and record your
+	  last three solves time.
+	  </p>
 	</description>
+	<url>https://github.com/herpiko/cubetimer</url>
+	<content_rating type="oars-1.1" />
 </component>
