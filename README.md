@@ -10,11 +10,23 @@ CubeTimer is a simple app timer for measure your solve time while playing with R
 
 ### Flatpak
 
-Currently this software is still under review by Flathub team but if you don't want to wait you can install this via test branch,
+CubeTimer is still under review by Flathub team but if you don't want to wait you can install this via test branch,
 
 ```
 flatpak install --user https://dl.flathub.org/build-repo/51051/xyz.aguno.CubeTimer.flatpakref
 ```
+
+### Snap
+
+CubeTimer is still under review by Snapcraft team to get the D-Bus access. You can install via Snap but it may not work,
+
+```
+snap install cubetimer
+```
+
+Snapcraft.io page: https://snapcraft.io/cubetimer
+
+
 
 ## Usage
 
