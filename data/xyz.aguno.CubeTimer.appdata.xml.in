@@ -15,7 +15,6 @@
 	  last three solves time.
 	  </p>
 	</description>
-	<icon type="local">assets/icon.png</icon>
 	<url type="homepage">https://github.com/herpiko/cubetimer</url>
 	<content_rating type="oars-1.1" />
  	<screenshots>
