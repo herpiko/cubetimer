@@ -33,7 +33,7 @@ parts:
   cubetimer:
     source: https://github.com/herpiko/cubetimer
     source-type: git
-    source-commit: '6f451b3c2c34d168b597f083256009d60a7351be'
+    source-commit: 'e07392db8294df383690064b33e27dc1353819f5'
     plugin: meson
     meson-parameters:
       - --prefix=/usr
