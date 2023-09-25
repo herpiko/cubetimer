@@ -1,6 +1,7 @@
 name: cubetimer
+adopt-info: part-with-metadata
 base: core22
-version: '0.1.8'
+version: '0.1.12'
 summary: Simple rubik cube timer, like stackmat but for Linux.
 description: |
   Like a StackMat, but for Linux.
@@ -32,7 +33,7 @@ parts:
   cubetimer:
     source: https://github.com/herpiko/cubetimer
     source-type: git
-    source-commit: 'f98cb4c9edd11d651eb47868b4e241602972279a'
+    source-commit: '6f451b3c2c34d168b597f083256009d60a7351be'
     plugin: meson
     meson-parameters:
       - --prefix=/usr

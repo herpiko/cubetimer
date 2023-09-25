@@ -150,7 +150,7 @@ class AboutDialog(Gtk.AboutDialog):
     def __init__(self, parent):
         Gtk.AboutDialog.__init__(self)
         self.props.program_name = 'CubeTimer'
-        self.props.version = "0.1.0"
+        self.props.version = "0.1.12"
         self.props.authors = ['Herpiko Dwi Aguno']
         self.props.copyright = '2023 Herpiko Dwi Aguno'
         self.props.logo_icon_name = 'xyz.aguno.CubeTimer'

@@ -7,7 +7,6 @@
           <release version="0.1.9" date="2023-09-24"/>
 	</releases>
 	<name>CubeTimer</name>
-	<icon type="local">assets/icon.png</icon>
 	<summary>Like a StackMat, but for Linux.</summary>
 	<description>
 	  <p>CubeTimer is a simple app timer for measure your solve 
@@ -16,6 +15,7 @@
 	  last three solves time.
 	  </p>
 	</description>
+	<icon type="local">assets/icon.png</icon>
 	<url type="homepage">https://github.com/herpiko/cubetimer</url>
 	<content_rating type="oars-1.1" />
  	<screenshots>
