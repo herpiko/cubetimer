@@ -10,7 +10,7 @@ CubeTimer is a simple app timer for measuring your solve time while playing Rubi
 
 ### Flatpak
 
-CubeTimer is still under review by Flathub team but if you don't want to wait you can install this via test branch,
+CubeTimer is still <a href="https://github.com/flathub/flathub/pull/4535">under review by Flathub team</a> but if you don't want to wait you can install this via test branch,
 
 ```
 flatpak install --user https://dl.flathub.org/build-repo/51051/xyz.aguno.CubeTimer.flatpakref
@@ -18,20 +18,16 @@ flatpak install --user https://dl.flathub.org/build-repo/51051/xyz.aguno.CubeTim
 
 ### Snap
 
-CubeTimer is still under review by Snapcraft team to get the D-Bus access. You can install via Snap but it may not work,
+CubeTimer is available at <a href="https://github.com/flathub/flathub/pull/4535">Snapcraft.io</a> and Ubuntu Software.
+
 
 ```
 snap install cubetimer
 ```
 
-Snapcraft.io page: https://snapcraft.io/cubetimer
-
-
-
 ## Usage
 
 Press and hold spacebar key, then release to start the timer. Press spacebar again to stop the timer. Repeat.
-
 
 ## License
 
