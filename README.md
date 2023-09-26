@@ -18,7 +18,7 @@ flatpak install --user https://dl.flathub.org/build-repo/51051/xyz.aguno.CubeTim
 
 ### Snap
 
-CubeTimer is available at <a href="https://github.com/flathub/flathub/pull/4535">Snapcraft.io</a> and Ubuntu Software.
+CubeTimer is available at <a href="https://snapcraft.io/cubetimer">Snapcraft.io</a> and Ubuntu Software.
 
 
 ```
