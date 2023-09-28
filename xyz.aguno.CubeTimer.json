@@ -31,7 +31,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/herpiko/cubetimer.git",
-                    "commit" : "cf93b40096e8f318f3487b60bb2a714911f34015"
+                    "commit" : "6520eb1bc6c827e972d9f19f1766cd09cd7ccc3c"
                 }
             ]
         }
