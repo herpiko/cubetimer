@@ -76,8 +76,13 @@ class CubetimerWindow(Gtk.ApplicationWindow):
         prev = self.ScrambleNotation.get_label()
         moves = ["U", "U'", "U2", "D", "D'", "D2", "L", "L'", "L2", "R", "R'", "R2", "F", "F'", "F2", "B", "B'", "B2"]
         scramble = []
-        for _ in range(21):
+        while len(scramble) < 21:
             random_move = random.choice(moves)
+            if len(scramble) >= 1:
+                last_move = scramble[-1]
+                # Avoid the same letter as the previous one
+                if last_move[0:1] == random_move[0:1]:
+                    continue
             scramble.append(random_move)
         scrambled =  "  ".join(scramble)
         self.ScrambleNotation.set_text(scrambled)
