@@ -1,7 +1,7 @@
 name: cubetimer
 adopt-info: part-with-metadata
 base: core22
-version: '0.1.12'
+version: '0.1.13'
 summary: Simple rubik cube timer, like stackmat but for Linux.
 description: |
   Like a StackMat, but for Linux.
