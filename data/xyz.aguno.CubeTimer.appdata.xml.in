@@ -7,7 +7,7 @@
           <release version="0.1.9" date="2023-09-24"/>
 	</releases>
 	<name>CubeTimer</name>
-	<summary>Like a StackMat, but for Linux.</summary>
+	<summary>Like a StackMat but for Linux</summary>
 	<description>
 	  <p>CubeTimer is a simple app timer for measure your solve 
 	  time while playing with Rubik cube puzzle, especially 3x3x3.
