@@ -20,18 +20,17 @@
 }
 
 .scramble-label {
-  color: black;
   font-size: 16px;
 }
 
 .prev-scramble-label {
-  color: black;
+  opacity: 0.9
 }
 
 .prev-2-scramble-label {
-  color: grey;
+  opacity: 0.6
 }
 
 .prev-3-scramble-label {
-  color: lightgrey;
+  opacity: 0.2
 }
